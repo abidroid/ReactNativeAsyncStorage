@@ -7,7 +7,7 @@ const DashboardScreen = ({ navigation }) => {
 
         <View style={styles.container}>
             <Pressable style={styles.itemRow}
-            onPress={()=> {navigation.navigate("CounterScreen")}}
+                onPress={() => { navigation.navigate("CounterScreen") }}
             >
                 <View style={styles.circalAvatar}><Text>1</Text></View>
                 <View><Text style={styles.title}>Counter Demo</Text>
@@ -15,7 +15,7 @@ const DashboardScreen = ({ navigation }) => {
                 </View>
             </Pressable>
             <Pressable style={styles.itemRow}
-                        onPress={()=> {navigation.navigate("BulbScreen")}}
+                onPress={() => { navigation.navigate("BulbScreen") }}
 
             >
                 <View style={styles.circalAvatar}><Text>2</Text></View>
@@ -23,12 +23,22 @@ const DashboardScreen = ({ navigation }) => {
                     <Text style={styles.subTitle}>Persist the bulb</Text>
                 </View>
             </Pressable>
+
+            <Pressable style={styles.itemRow}
+                onPress={() => { navigation.navigate("CardScreen") }}
+
+            >
+                <View style={styles.circalAvatar}><Text>3</Text></View>
+                <View><Text style={styles.title}>Card Screen with Switch Feature</Text>
+                    <Text style={styles.subTitle}>Persist the Card</Text>
+                </View>
+            </Pressable>
         </View>
     );
 };
 
 const styles = StyleSheet.create({
-    container:{padding: 8},
+    container: { padding: 8 },
     itemRow: {
         flexDirection: 'row',
         gap: 8,
@@ -45,9 +55,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#CCC'
-    }, 
+    },
 
-    title: {fontSize: 20},
-    subTitle: {fontStyle: "italic"},
+    title: { fontSize: 20 },
+    subTitle: { fontStyle: "italic" },
 });
 export default DashboardScreen;
