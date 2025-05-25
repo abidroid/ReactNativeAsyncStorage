@@ -1,13 +1,22 @@
 import {View, Text} from 'react-native';
+import { MaterialIcons } from '@expo/vector-icons';
+
+
+const VerticalCard = () => {
+    return (
+        <View>
+            <MaterialIcons name='lightbulb' size={80}/>
+        </View>
+    );
+};
 
 const CardScreen = () => {
 
     return (
-        <View>
-            <Text>Card Screen</Text>
-        </View>
+        <VerticalCard />
     );
 };
+
 
 
 export default CardScreen;
